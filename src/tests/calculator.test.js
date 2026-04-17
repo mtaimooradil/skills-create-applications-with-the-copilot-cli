@@ -8,6 +8,24 @@ const {
 } = require("../calculator");
 
 describe("calculator core functions", () => {
+  test("modulo operation", () => {
+    expect(5 % 2).toBe(1);
+  });
+
+  test("power operation", () => {
+    expect(Math.pow(2, 3)).toBe(8);
+    expect(2 ** 3).toBe(8);
+  });
+
+  test("square root operation", () => {
+    expect(Math.sqrt(16)).toBe(4);
+    expect(Math.sqrt(0)).toBe(0);
+  });
+
+  test("square root of negative number returns NaN", () => {
+    expect(Number.isNaN(Math.sqrt(-1))).toBe(true);
+  });
+
   test("adds numbers", () => {
     expect(add(2, 3)).toBe(5);
   });
